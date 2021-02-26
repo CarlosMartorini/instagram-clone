@@ -14,38 +14,206 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+/*GERAL*/
+html, body, div, hgroup, p, a, 
+img, ul, li, label, article, aside, figcaption, 
+footer, header, menu, nav, section, figure {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 /* VARIÁVEIS */
 :root{
-  
+	--color-texts:#262626;
+	--color-border: #a3a3a3;
+	--background-color: #f5f5f5;
+	--font: 'Helvetica','Arial',sans-serif;
+	--container-width: 935px;
+	--side-square: 77px;
+	--side-photo: 293px;
 }
 
 /*BODY*/
 body{
-
+	
 }
 
 /*TOPO*/
 header{
-	
+	padding: 20px 0 10px 40px;
+}
+
+figcaption{
+	font-weight: bold;
+	text-align: center;
 }
 
 /*RODAPÉ*/
 footer{
-
+	padding-top: 30px;
+	background-color: var(--background-color);
 }
+
+	nav{
+		display: inline-block;
+	}
+
+	.footer-nav a{
+		text-decoration: none;
+		color: var(--color-texts);
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 5px;
+	}
+
+	.copyright{
+		display: inline;
+		float: right;
+	}
 
 /*PÁGINA INICIAL*/
 main{
-	
+	background-color: var(--background-color);
+	padding: 20px;
+	border-top: 2px solid var(--color-border);
+	font-family: var(--font);
 }
 	main .profile-content{
 
 	}
 
-	main .highlighted-stories{
+		.profile-photo{
+			display: inline-block;
+		}
 
+		.profile-photo img{
+			border-radius: 50%;
+			border: 2px solid var(--color-border);
+			padding: 5px;
+		}
+
+		.profile-info h1{
+			display: inline-block;
+			font-size: 20px;
+			margin-bottom: 2px;
+		}
+
+		.profile-info ul{
+			list-style: none;
+			text-align: justify;
+		}
+
+		.profile-info a{
+			text-decoration: none;
+			color: black;
+			font-weight: bold;
+		}
+
+		.profile-info h2{
+			margin: 3px 0 0 0;
+			font-size: 18px;
+
+		}
+
+			.profile-data p{
+				display: inline-block;
+				padding: 5px;
+				text-align: justify;
+			}
+		
+			.profile-data span{
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+	main .highlighted-stories{
+		display: flex;
 	}
+
+		.highlighted-stories ul{
+			list-style: none;
+			display: flex;
+			padding: 10px;
+		}
+
+		.highlighted-stories li{
+			padding: 10px;
+			text-align: center;
+		}
+
+		.highlighted-stories img{
+			width: var(--side-square);
+			height: var(--side-square);
+			border-radius: 50%;
+			border: 2px solid var(--color-border);
+			padding: 2px;
+		}
 
 	main .profile-posts{
-
+		border-top: 2px solid var(--color-border);
 	}
+
+		.profile-posts nav{
+			display: block;
+			text-align: center;
+			height: 10px;
+			padding: 10px
+		}
+
+		.profile-posts a{
+			padding: 10px 30px;
+			text-decoration: none;
+			color: var(--color-texts);
+			text-transform: uppercase;
+		}
+
+		.profile-posts nav a:hover{
+			font-weight: bold;
+			border-top: 2px solid var(--color-texts);
+		}
+
+		.profile-posts ul{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.profile-posts li{
+			text-align: center;
+		}
+
+		.profile-posts li img{
+			width: var(--side-photo);
+			height: var(--side-photo);
+		}
+
+@media(min-width: 935px){
+	main{
+		width: var(--container-width);
+	}
+
+	footer{
+		width: var(--container-width);
+	}
+
+	main .profile-content{
+		display: flex;
+		padding: 20px;
+	}
+
+		.profile-info{
+			padding-left: 50px;
+		}
+	
+	.profile-posts ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around
+	}
+}
