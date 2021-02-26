@@ -17,7 +17,7 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 /*GERAL*/
 html, body, div, hgroup, p, a, 
 img, ul, li, label, article, aside, figcaption, 
-footer, header, menu, nav, section, figure {
+footer, header, menu, nav, section, figure, main{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -45,6 +45,8 @@ body{
 /*TOPO*/
 header{
 	padding: 20px 0 10px 40px;
+	width: var(--container-width);
+	margin: 0 auto;
 }
 
 figcaption{
@@ -55,7 +57,9 @@ figcaption{
 /*RODAPÉ*/
 footer{
 	padding-top: 30px;
+	padding: 0 20px 20px 20px;
 	background-color: var(--background-color);
+	margin: 0 auto;
 }
 
 	nav{
@@ -78,6 +82,7 @@ footer{
 
 /*PÁGINA INICIAL*/
 main{
+	margin: 0 auto;
 	background-color: var(--background-color);
 	padding: 20px;
 	border-top: 2px solid var(--color-border);
@@ -101,6 +106,7 @@ main{
 			display: inline-block;
 			font-size: 20px;
 			margin-bottom: 2px;
+			margin-top: 5px;
 		}
 
 		.profile-info ul{
@@ -138,6 +144,7 @@ main{
 		.highlighted-stories ul{
 			list-style: none;
 			display: flex;
+			flex-direction: row-reverse;
 			padding: 10px;
 		}
 
@@ -191,6 +198,11 @@ main{
 		.profile-posts li img{
 			width: var(--side-photo);
 			height: var(--side-photo);
+		}
+
+		.fa{
+			padding-right: 5px;
+			color: var(--color-texts);
 		}
 
 @media(min-width: 935px){
