@@ -45,7 +45,6 @@ body{
 /*TOPO*/
 header{
 	padding: 20px 0 10px 40px;
-	width: var(--container-width);
 	margin: 0 auto;
 }
 
@@ -207,6 +206,10 @@ main{
 
 @media(min-width: 935px){
 	main{
+		width: var(--container-width);
+	}
+
+	header{
 		width: var(--container-width);
 	}
 
